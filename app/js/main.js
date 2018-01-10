@@ -1,12 +1,13 @@
 /* **************************
 VARIABLES
 *************************** */
-const rootURL = "https://swapi.co/api/";
+const rootURL = "https://swapi.co/api";
 const wookie = "?format=wookiee";
 
 /* **************************
   DOM VARIABLES
   *************************** */
+const wookButton = document.querySelector( ".js-wookie" );
 
 /* **************************
   FETCH CALLS
@@ -22,15 +23,33 @@ const wookie = "?format=wookiee";
 */
 
 const fetchAllSections = ( section ) => {
-  fetch( `${ rootURL }/${ section }/`, {
-    method: "get",
+  fetch( `${ rootURL }/${ section }/`)
+  .then( function( response ) {
+    return response.json();
   })
-  .then( function( data ) {
-    console.log( data );
+  .then( function ( data ) {
+    // console.log(data)
   })
   .catch( function( error ) {
     console.error( error );
   });
 };
 
-fetchAllSections("people");
+const fetchHomeData = () => {
+  fetch( `${ rootURL }/people/1/`)
+  .then( function( response ) {
+    return response.json()
+  })
+  .then(function ( data ) {
+    console.log(data);
+  })
+  .catch( function( error ) {
+    console.error( error );
+  });
+};
+
+fetchHomeData();
+
+/* **************************
+  EVENT LISTENERS
+  *************************** */

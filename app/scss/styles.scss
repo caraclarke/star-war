@@ -5,3 +5,12 @@ body {
   background-color: $neutral-white;
   color: $neutral-black;
 }
+
+p {
+  .btn-link {
+    padding: 0;
+    border: 0;
+    text-decoration: underline;
+    margin-bottom: 2px;
+  }
+}
