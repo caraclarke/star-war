@@ -5,7 +5,8 @@
   },
   "globals": {
     "document": false,
-    "event": false
+    "event": false,
+    "fetch": false
   },
   "extends": "airbnb",
   "rules": {
@@ -85,7 +86,7 @@
       "anonymous": "always",
       "named": "never"
     }],
-    "space-in-parens": [ 2, "always"],
+    "space-in-parens": 0,
     "space-infix-ops": 1,
     "template-curly-spacing": [ 2, "always" ],
     "array-bracket-spacing": [ 2, "always" ],
