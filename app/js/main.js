@@ -1,7 +1,8 @@
 /* **************************
 VARIABLES
 *************************** */
-const root = "https://swapi.co/api/";
+const rootURL = "https://swapi.co/api/";
+const wookie = "?format=wookiee";
 
 /* **************************
   DOM VARIABLES
@@ -21,7 +22,7 @@ const root = "https://swapi.co/api/";
 */
 
 const fetchAllSections = ( section ) => {
-  fetch( `${ root }/${ section }/`, {
+  fetch( `${ rootURL }/${ section }/`, {
     method: "get",
   })
   .then( function( data ) {
